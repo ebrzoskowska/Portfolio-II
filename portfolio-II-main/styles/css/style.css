@@ -1,0 +1,425 @@
+/*General*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@200;300;400;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*Fonts*/
+/*Colors*/
+/*Breakpoints*/
+/*--------------------------------------------------------------------*/
+/*Home page*/
+.container {
+  width: 100vw;
+  height: 100vh;
+  color: #e06287;
+  background-color: #000000;
+  font-size: 120px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  @media (max-width: 800px) {
+    .container {
+      text-align: center;
+      font-size: 80px; } }
+  @media (max-width: 500px) {
+    .container {
+      height: 100%; } }
+  .container h1 {
+    display: block;
+    position: absolute;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 80px;
+    color: #ffd2db;
+    text-shadow: 4px 2px #e70849;
+    z-index: 100;
+    transform-origin: left top 0;
+    margin: 20px 0 10px 100px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+    @media (max-width: 800px) {
+      .container h1 {
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+        margin: 10px 0;
+        font-size: 65px; } }
+    @media (max-width: 500px) {
+      .container h1 {
+        font-size: 40px; } }
+  .container .square__content {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    @media (max-width: 500px) {
+      .container .square__content {
+        margin-bottom: 40px; } }
+    .container .square__content .square__row {
+      max-width: 1200px;
+      flex: 1;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex; }
+      @media (max-width: 500px) {
+        .container .square__content .square__row {
+          flex-wrap: wrap;
+          justify-content: center; } }
+      .container .square__content .square__row a {
+        color: #e06287;
+        text-decoration: none; }
+        .container .square__content .square__row a .square {
+          width: 200px;
+          height: 150px;
+          border: 3px solid #e06287;
+          margin: 20px;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex; }
+          @media (max-width: 800px) {
+            .container .square__content .square__row a .square {
+              width: 140px;
+              height: 140px;
+              margin: 5px; } }
+          @media (max-width: 500px) {
+            .container .square__content .square__row a .square {
+              width: 290px;
+              height: 180px;
+              border: 1px solid #e06287;
+              margin: 0; } }
+          .container .square__content .square__row a .square:before {
+            content: "";
+            font-family: 'Montserrat Subrayada', sans-serif;
+            position: absolute;
+            line-height: 2;
+            font-size: 30%;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s; }
+          .container .square__content .square__row a .square:active {
+            top: 2px; }
+          .container .square__content .square__row a .square:hover i {
+            -webkit-transform: translateY(300%);
+            -moz-transform: translateY(300%);
+            -ms-transform: translateY(300%);
+            transform: translateY(300%); }
+          .container .square__content .square__row a .square:hover:before {
+            top: 0; }
+          .container .square__content .square__row a .square i {
+            margin: auto;
+            display: inline-block;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden; }
+        .container .square__content .square__row a .square-one {
+          animation: disappearance 2s; }
+          .container .square__content .square__row a .square-one:before {
+            content: "CV";
+            left: 30%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-one:before {
+                animation: disappearance 2s;
+                left: 5%;
+                top: 0; } }
+        .container .square__content .square__row a .square-two {
+          animation: disappearance 4s; }
+          .container .square__content .square__row a .square-two:before {
+            content: "project  1";
+            left: 5%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-two:before {
+                left: 5%;
+                animation: disappearance 2s;
+                top: 0; } }
+        .container .square__content .square__row a .square-three {
+          animation: disappearance 6s; }
+          .container .square__content .square__row a .square-three:before {
+            content: "contact";
+            left: 3%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-three:before {
+                animation: disappearance 2s;
+                top: 0;
+                left: 5%; } }
+        .container .square__content .square__row a .square-four {
+          animation: disappearance 4s; }
+          .container .square__content .square__row a .square-four:before {
+            content: "project  2";
+            left: 3%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-four:before {
+                animation: disappearance 4s;
+                top: 0;
+                left: 5%; } }
+        .container .square__content .square__row a .square-five {
+          animation: disappearance 6s; }
+          .container .square__content .square__row a .square-five:before {
+            content: "github";
+            left: 11%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-five:before {
+                animation: disappearance 4s;
+                top: 0;
+                left: 5%; } }
+        .container .square__content .square__row a .square-six {
+          animation: disappearance 4s; }
+          .container .square__content .square__row a .square-six:before {
+            content: "project  3";
+            left: 6%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-six:before {
+                animation: disappearance 4s;
+                top: 0;
+                left: 5%; } }
+        .container .square__content .square__row a .square-seven {
+          animation: disappearance 6s; }
+          .container .square__content .square__row a .square-seven:before {
+            content: "project  4";
+            left: 6%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-seven:before {
+                animation: disappearance 6s;
+                top: 0;
+                left: 5%; } }
+        .container .square__content .square__row a .square-eight {
+          animation: disappearance 4s; }
+          .container .square__content .square__row a .square-eight:before {
+            content: "project  5";
+            left: 6%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-eight:before {
+                animation: disappearance 6s;
+                top: 0;
+                left: 5%; } }
+        .container .square__content .square__row a .square-nine {
+          animation: disappearance 2s; }
+          .container .square__content .square__row a .square-nine:before {
+            content: "linked in";
+            left: 6%;
+            top: -200%; }
+            @media (max-width: 500px) {
+              .container .square__content .square__row a .square-nine:before {
+                animation: disappearance 6s;
+                top: 0;
+                left: 5%; } }
+
+/*--------------------------------------------------------------------*/
+/*CV page*/
+.cv-container {
+  width: 100vw;
+  height: 100%;
+  color: #e06287;
+  background-color: #000000;
+  font-size: 120px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  padding: 20px; }
+  @media (max-width: 800px) {
+    .cv-container {
+      padding: 20px; } }
+  @media (max-width: 500px) {
+    .cv-container {
+      padding: 10px; } }
+  .cv-container h1 {
+    display: block;
+    position: absolute;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 80px;
+    color: #b9e0cd;
+    text-shadow: 4px 2px #e70849;
+    z-index: 100;
+    transform-origin: left top 0;
+    margin: 20px 0 10px 100px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+    @media (max-width: 800px) {
+      .cv-container h1 {
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+        margin: 10px 0;
+        font-size: 65px; } }
+    @media (max-width: 500px) {
+      .cv-container h1 {
+        font-size: 40px;
+        text-decoration: none; } }
+  .cv-container h2 {
+    font-size: 65px;
+    padding-top: 150px;
+    font-weight: 400; }
+    @media (max-width: 800px) {
+      .cv-container h2 {
+        font-size: 40px;
+        padding-top: 10px; } }
+    @media (max-width: 500px) {
+      .cv-container h2 {
+        font-size: 30px; } }
+  .cv-container h3 {
+    font-size: 35px;
+    font-weight: 200;
+    padding: 10px 0 10px 0; }
+    @media (max-width: 800px) {
+      .cv-container h3 {
+        font-size: 30px;
+        padding-top: 10px; } }
+    @media (max-width: 500px) {
+      .cv-container h3 {
+        font-size: 18px; } }
+  .cv-container p {
+    font-size: 18px;
+    color: #ffd2db;
+    width: 90%;
+    padding: 20px 0 20px 0; }
+
+/*--------------------------------------------------------------------*/
+/*contact page*/
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  color: #e06287;
+  background-color: #000000;
+  font-size: 120px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  font-size: 18px; }
+  @media (max-width: 800px) {
+    .contact-container {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center; } }
+  .contact-container h1 {
+    display: block;
+    position: absolute;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 80px;
+    color: #b9e0cd;
+    text-shadow: 4px 2px #e70849;
+    z-index: 100;
+    transform-origin: left top 0;
+    margin: 20px 0 10px 100px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+    @media (max-width: 800px) {
+      .contact-container h1 {
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+        margin: 10px 0;
+        font-size: 65px; } }
+    @media (max-width: 500px) {
+      .contact-container h1 {
+        font-size: 40px; } }
+  .contact-container .contact-form {
+    background-color: rgba(72, 72, 72, 0.7);
+    padding: 10px 20px 30px 20px;
+    margin: auto;
+    width: 50%;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px; }
+    @media (max-width: 800px) {
+      .contact-container .contact-form {
+        width: 70%; } }
+    @media (max-width: 500px) {
+      .contact-container .contact-form {
+        width: 90%; } }
+    .contact-container .contact-form form input, .contact-container .contact-form form textarea, .contact-container .contact-form form label {
+      font-size: 15px;
+      margin-bottom: 2px;
+      outline: none;
+      color: #ffffff; }
+    .contact-container .contact-form form input, .contact-container .contact-form form textarea {
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      width: 100%;
+      background: #505050;
+      border: 0;
+      margin-bottom: 25px;
+      padding: 5px; }
+    .contact-container .contact-form form textarea {
+      height: 150px; }
+    .contact-container .contact-form form button[type="submit"] {
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      background: #e06287;
+      color: #ffffff;
+      margin: 0 0 5px;
+      padding: 10px;
+      border-radius: 5px; }
+    .contact-container .contact-form form button[type="submit"]:active {
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+    .contact-container .contact-form form input:required, .contact-container .contact-form form textarea:required {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -o-box-shadow: none;
+      box-shadow: none; }
+    .contact-container .contact-form form .required {
+      font-weight: bold;
+      color: #ffffff; }
+
+/*--------------------------------------------------------------------*/
+/*Css animation disappearance*/
+@-webkit-keyframes disappearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes disappearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes disappearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes disappearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png">
+	
+<!--SEO information-->
+	<title>Contact form</title>
+	<meta name="description" content="Hi, I'm Emily, junior frontend developer with almost one year of experience in developing websites." />
+	<meta name="robots" content="index, follow" />
+	<meta name="referrer" content="always" />
+	<meta name="keywords" content="Emilia Brzoskowska, frontend, front-end developer, websites, portfolio, webdeveloper">
+
+<!--Facebook view-->
+	<meta property="og:title" content="Portfolio Brzoskowska" />
+	<meta property="og:description" content="Hi, I'm Emily, junior frontend developer with almost one year of experience in developing websites." />
+	<meta property="og:image" content="http://brzoskowska.pl/images/bg.png">
+	<meta property="og:url" content="http://brzoskowska.pl/" />
+
+<!--Styles-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/css/style.css">	
+	<link rel="stylesheet" href="awesome/css/font-awesome.min.css">
+
+<!-- jQuery library  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+
+</head>
+<body>
+
+<!-- Main Container -->
+<div class="contact-container">
+
+	<a class="contact-container-link" href="http://cetkowan.webd.pl/brzoskowska.pl/portfolio/index.html">
+		<h1>contact</h1>
+	</a>	
+
+	<div class="contact-form">
+		<h2>Email me.</h2> 
+
+		<form  method="post" action="http://formspree.io/emilia.brzoskowska@gazeta.pl">
+			<div>
+			    <label for="name">
+			    <span class="required">Name:</span> 
+			    <input type="text" id="name" name="name" value="" placeholder="..." required="required" tabindex="1" autofocus="autofocus" />
+			    </label> 
+			</div>
+			<div>
+			    <label for="email">
+			    <span class="required">Email:</span>
+			    <input type="email" id="email" name="_replyto" value="" placeholder="@" tabindex="2" required="required" />
+			    </label>  
+			</div>
+
+			<div>		          
+			    <label for="message">
+			    <span class="required">Message:</span> 
+			    <textarea id="message" name="name" placeholder="Dear Emily, I have a great job for you..." tabindex="5" required="required"></textarea> 
+			    </label>  
+			</div>
+			<div>		           
+			    <button name="submit" type="submit" id="submit" value="Send">SEND</button> 
+			</div>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

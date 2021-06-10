@@ -1,0 +1,347 @@
+@import "mixins.scss";
+
+/*General*/
+* {
+	margin: 0;
+	padding: 0;	
+	box-sizing: border-box;
+}
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Monoton|Montserrat:200,300,400,800&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+$fw-200	               				: 200;
+$fw-300	                			: 300;
+$fw-400	                			: 400;
+$fw-800	                			: 800;
+
+
+$fs-18                              : 18px;
+$fs-30                              : 30px; 
+$fs-40                              : 40px; 
+$fs-50                              : 50px;
+$fs-65                              : 65px; 
+$fs-80                              : 80px; 
+$fs-120                             : 120px; 
+
+/*Colors*/
+$color-background					: #000000;
+$color-text                         : #e06287;
+$color-text-white                   : #ffffff;
+$color-text-light-grey              : #b9e0cd;
+$color-hover                        : #6ea070;  
+
+/*Breakpoints*/
+$bp-desktop 						: 1200px;
+$bp-tablet 							: 800px;
+$bp-mobile 							: 500px;
+
+/*--------------------------------------------------------------------*/
+/*Home page*/
+
+.container {
+	@include container-general;
+	@include flex;
+	@include flex-column;
+	@media (max-width: $bp-tablet) {
+		text-align: center;
+		font-size: $fs-80;
+	}	
+	@media (max-width: $bp-mobile) {
+		height: 100%;
+	}
+
+	h1 {
+		@include h1-title;
+	    @include rotate;
+	    @media (max-width: $bp-tablet) {
+			@include transform;
+			@include h1-title-tablet;
+	    }	
+	    @media (max-width: $bp-mobile) {
+	    	@include h1-title-mobile;
+	    }	
+	}
+
+	.square__content {
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		@include flex;
+		@include flex-column;
+		@media (max-width: $bp-mobile) {
+			margin-bottom: 40px;
+		}	
+
+		.square__row {
+			max-width: 1200px;
+			flex: 1;
+			@include flex;
+			@media (max-width: $bp-mobile) {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			a {
+				color: $color-text;
+				text-decoration: none;
+			
+				.square {
+					width: 200px;
+					height: 150px;
+					border: 3px solid $color-text;
+					margin: 20px;
+					cursor: pointer;
+					position: relative;
+					overflow: hidden;
+					@include backface-visibility;
+					@include flex;
+					@media (max-width: $bp-tablet) {
+						width: 140px;
+						height: 140px;
+						margin: 5px;
+					}
+					@media (max-width: $bp-mobile) {
+						width: 290px;
+						height: 180px;
+						border: 1px solid $color-text;
+						margin: 0;
+					}	
+					&:before {
+						content: "";
+						font-family: 'Audiowide', cursive;
+						position: absolute;
+						line-height: 2;
+						font-size: 30%;
+						@include transition3;
+					}
+					&:active {
+						top: 2px;
+					}
+					&:hover i {
+						@include translate-300;
+					}
+					&:hover:before {
+						top: 0;
+					}
+
+					i {
+						margin: auto;
+						display: inline-block;
+						@include transition5;										
+						@include backface-visibility;
+					}
+				}
+
+				.square-one {
+					@include square-one-style;	
+				}
+
+				.square-two {
+					@include square-two-style;				
+				}
+
+				.square-three {
+					@include square-three-style;				
+				}
+
+				.square-four {
+					@include square-four-style;							
+				}
+
+				.square-five {
+					@include square-five-style;								
+				}
+
+				.square-six {
+					@include square-six-style;							
+				}
+
+				.square-seven {
+					@include square-seven-style;									
+				}
+
+				.square-eight {
+					@include square-eight-style;								
+				}	
+
+				.square-nine {
+					@include square-nine-style;	
+				}		
+			}	
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------------*/
+/*CV page*/
+
+
+.cv-container {
+	@include container-general;
+	padding: 30px;
+	height: 100%;
+	@media (max-width: $bp-tablet) {
+		padding: 20px;
+	}
+	@media (max-width: $bp-mobile) {
+		padding: 10px;
+	}
+
+	h1 {
+		@include h1-title;
+		@include rotate;
+		@media (max-width: $bp-tablet) {
+			@include transform;
+			@include h1-title-tablet;
+	    }	
+		@media (max-width: $bp-mobile) {
+	    	@include h1-title-mobile;
+	    }	
+	}
+		
+	h2 {
+		font-size: $fs-65;
+		padding-top: 150px;
+		font-weight: $fw-400;	
+		@media (max-width: $bp-tablet) {
+			font-size: $fs-40;
+			padding-top: 10px;
+		}
+		@media (max-width: $bp-mobile) {
+			font-size: $fs-30;
+		}				
+	}
+
+	h3 {
+		font-size: $fs-40;
+		font-weight: $fw-200;
+		padding: 10px 0 10px 0;
+		@media (max-width: $bp-tablet) {
+			font-size: $fs-30;
+			padding-top: 10px;
+		}
+		@media (max-width: $bp-mobile) {
+			font-size: $fs-18;
+		}	
+	}
+
+	p {
+		font-size: $fs-18;
+		color: $color-text-light-grey;
+		padding: 20px 0 20px 0;
+	}
+}
+
+
+/*--------------------------------------------------------------------*/
+/*contact page*/
+
+.contact-container {
+	@include container-general;
+	@include flex;
+	font-size: 18px;
+    @media (max-width: $bp-tablet) {
+    	@include flex-column;
+    	text-align: center;
+    }
+
+	h1 {
+		@include h1-title;
+		@include rotate;
+	    @media (max-width: $bp-tablet) {
+			@include transform;
+			@include h1-title-tablet;
+	    }	
+	    @media (max-width: $bp-mobile) {
+	    	@include h1-title-mobile;	
+	    }	
+	}
+
+	.contact-form {
+		background-color: rgba(72,72,72,0.7);
+		padding: 10px 20px 30px 20px;
+		margin: auto;
+		width: 50%;
+		@include radius-seven;
+		@media (max-width: $bp-tablet) {
+			width: 70%;
+	    }
+		@media (max-width: $bp-mobile) {
+			width: 90%;
+	    }
+
+		form {	
+
+			input, textarea, label { 
+			    font-size: 15px;  
+			    margin-bottom: 2px;
+			    outline: none;
+			    color: $color-text-white;
+			} 
+
+			input, textarea { 
+				@include radius-four;	
+			    width:100%;
+			    background: #505050;
+			    border: 0; 
+			    margin-bottom: 25px;  
+			    padding: 5px;  
+			}  
+
+			textarea {
+			    height: 150px;
+			}
+
+			button[type="submit"] {
+			    cursor:pointer;
+			    width:100%;
+			    border:none;
+			    background: $color-text;
+			    color: $color-text-white;
+			    margin: 0 0 5px;
+			    padding: 10px;
+			    border-radius: 5px;
+			}
+
+			button[type="submit"]:active {
+			   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+			}
+
+			input:required, textarea:required {  
+				@include box-shadow-none;
+			} 
+
+			.required {  
+			   font-weight: bold;  
+			   color: $color-text-white ;    
+			}
+		}	
+	}	
+}
+
+
+
+
+
+/*--------------------------------------------------------------------*/
+/*Css animation disappearance*/
+@-webkit-keyframes disappearance {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes disappearance {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes disappearance {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes disappearance {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+

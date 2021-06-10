@@ -1,0 +1,256 @@
+@mixin top-height-0 {
+	top: 0;
+}
+
+@mixin top-height {
+	top: -200%;
+}
+
+@mixin left-3 {
+	left: 3%;
+}
+
+@mixin left-5 {
+	left: 5%;
+}
+
+@mixin left-6 {
+	left: 6%;
+}
+
+@mixin disappear-2 {
+	animation: disappearance 2s;
+}
+
+@mixin disappear-4 {
+	animation: disappearance 4s;
+}
+
+@mixin disappear-6 {
+	animation: disappearance 6s;
+}
+
+@mixin flex {
+	display: -webkit-flex;	
+	display: -ms-flex;	
+	display: flex;
+}
+
+@mixin flex-column {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;	
+	flex-direction: column;
+}
+
+@mixin translate-300 {
+	-webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+@mixin transition3 {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}	
+
+@mixin transition5 {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;	
+	transition: all 0.5s;
+}	
+
+@mixin backface-visibility {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}	
+
+@mixin transform {
+	-ms-transform: none;
+	-webkit-transform: none;
+	transform: none;
+}					
+
+@mixin radius-four {
+	-moz-border-radius: 4px;  
+	-webkit-border-radius: 4px;  
+	border-radius: 4px;
+}
+
+@mixin radius-seven {
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;	
+}
+
+@mixin box-shadow-none {
+	-webkit-box-shadow: none; 
+	-moz-box-shadow: none; 
+	-o-box-shadow: none; 			
+	box-shadow: none;
+}
+
+@mixin square-one-style {
+    @include disappear-2;
+	&:before {
+		content: "CV";
+		left: 30%;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include disappear-2;
+			@include left-5;
+	    	@include top-height-0;
+		}	
+	}
+}
+
+@mixin square-two-style {
+    @include disappear-4;
+	&:before {
+		content: "project  1";
+		left: 5%;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include left-5;
+			@include disappear-2;
+	    	@include top-height-0;
+		}
+	}
+}
+
+@mixin square-three-style {
+    @include disappear-6;
+	&:before {
+		content: "contact";
+		@include left-3;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include disappear-2;
+	    	@include top-height-0;
+	    	@include left-5;
+		}
+	}
+}
+
+@mixin square-four-style {
+    @include disappear-4;
+	&:before {
+		content: "project  2";
+		@include left-3;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include disappear-4;
+	    	@include top-height-0;
+	    	@include left-5;
+		}
+	}	
+}
+
+@mixin square-five-style {
+    @include disappear-6;
+	&:before {
+		content: "github";
+		left: 11%;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include disappear-4;
+	    	@include top-height-0;	 
+	    	@include left-5;   	
+		}	
+	}	
+}
+
+@mixin square-six-style {
+    @include disappear-4;
+	&:before {
+		content: "project  3";
+		@include left-6;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include disappear-4;
+	    	@include top-height-0;
+	    	@include left-5;
+		}
+	}	
+}
+
+@mixin square-seven-style {
+    @include disappear-6;
+	&:before {
+		content: "project  4";
+		@include left-6;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include disappear-6;
+	    	@include top-height-0;
+	    	@include left-5;
+		}		
+	}	
+}
+
+@mixin square-eight-style {
+    @include disappear-4;
+	&:before {
+		content: "project  5";
+		@include left-6;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include disappear-6;
+	    	@include top-height-0;
+	    	@include left-5;
+		}		
+	}	
+}
+
+@mixin square-nine-style {
+    @include disappear-2;
+	&:before {
+		content: "linked in";
+		@include left-6;
+		@include top-height;
+		@media (max-width: $bp-mobile) {
+			@include disappear-6;
+	    	@include top-height-0;
+	    	@include left-5;
+		}		
+	}	
+}
+
+@mixin container-general {
+	width: 100vw;
+	height: 100vh;
+	color: $color-text;
+	background-color: $color-background; 
+	font-size: $fs-120;
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+}
+
+@mixin h1-title {
+	display: block;
+	position: absolute;
+	font-family: 'Monoton', cursive;
+	font-size: $fs-80;
+	color: $color-text-light-grey;
+	z-index: 100;
+	transform-origin: left top 0;
+	margin: 20px 0 10px 100px;
+}
+
+@mixin h1-title-tablet {
+	position: relative;
+	margin: 10px 0;
+	font-size: $fs-65;
+}
+
+@mixin h1-title-mobile {
+	font-size: $fs-40;
+}
+
+@mixin rotate {
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg); 
+	transform: rotate(90deg);
+}
